@@ -1,6 +1,6 @@
 <?php
 
-namespace pcrt\widgets\select2;
+namespace pcrt\widgets\datepicker;
 
 use yii\web\AssetBundle;
 
@@ -9,11 +9,12 @@ class DatepickerAsset extends AssetBundle
     public $sourcePath = __DIR__ . '/assets';
 
     public $js = [
-        'js/tempusdominus-bootstrap-4.min.js'
+        'js/moment.min.js',
+        'js/daterangepicker.js'
     ];
 
     public $css = [
-        'css/tempusdominus-bootstrap-4.min.css'
+        'css/daterangepicker.css'
     ];
 
     public $depends = [
