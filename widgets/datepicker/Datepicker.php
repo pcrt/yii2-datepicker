@@ -15,26 +15,20 @@ use yii\web\View;
 use yii\widgets\InputWidget;
 
 /**
- * Yii2 implementation of Daterangepicker library (http://www.daterangepicker.com/)
+ * Yii2 implementation of flatpicker library (https://flatpickr.js.org/)
  * @author Marco Petrini <marco@bhima.eu>
  */
 
 class Datepicker extends InputWidget
 {
+
     /**
-     * @var array the options for the underlying Select2 JS plugin.
+     * @var array the options for the underlying flatpicker JS plugin.
      *            Please refer to the plugin Web page for possible options.
      *
      * @see https://select2.github.io/options.html#core-options
      */
     public $clientOptions = [];
-    /**
-     * @var array the event handlers for the underlying Select2 JS plugin.
-     *            Please refer to the corresponding plugin Web page for possible events.
-     *
-     * @see https://select2.github.io/options.html#events
-     */
-    public $clientEvents = [];
 
     /**
      * @inheritdoc
@@ -71,12 +65,7 @@ class Datepicker extends InputWidget
 
         $id = $this->options['id'];
 
-        $js[] = ";jQuery('#$id').daterangepicker($options);";
-        if (!empty($this->clientEvents)) {
-            foreach ($this->clientEvents as $event => $handler) {
-                $js[] = "jQuery('#$id').on('$event', $handler);";
-            }
-        }
+        $js[] = ";jQuery('#$id').flatpickr($options);";
 
         $view->registerJs(implode("\n", $js));
     }

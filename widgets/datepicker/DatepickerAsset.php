@@ -10,11 +10,12 @@ class DatepickerAsset extends AssetBundle
 
     public $js = [
         'js/moment.min.js',
-        'js/daterangepicker.js'
+        'js/flatpickr.min.js',
+        'js/flatpickr.it.min.js'
     ];
 
     public $css = [
-        'css/daterangepicker.css'
+        'css/flatpickr.min.css'
     ];
 
     public $depends = [
