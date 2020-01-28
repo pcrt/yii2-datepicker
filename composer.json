@@ -4,7 +4,7 @@
 	"description": "Yii2-datepicker widget based on TempusDomini",
 	"keywords": ["yii2", "theme", "helper", "assets", "tempusdomini"],
 	"license": "BSD-3-Clause",
-	"version": "0.9.0",
+	"version": "0.9.3",
 	"authors": [
 		{
 			"name": "Marco Petrini",

@@ -29,7 +29,7 @@ class Datepicker extends InputWidget
      * @see https://select2.github.io/options.html#core-options
      */
     public $clientOptions = [];
-
+    public $inputOption = [];
     /**
      * @inheritdoc
      */
@@ -42,6 +42,9 @@ class Datepicker extends InputWidget
      */
     public function run()
     {
+        // Merge External Option into widget
+        $this->options = array_merge($this->options, $this->inputOption);
+        
         if ($this->hasModel()) {
             echo Html::activeTextInput($this->model, $this->attribute, $this->options);
         } else {
